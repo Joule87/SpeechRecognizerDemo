@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F483A1AF2454A53E0081D96F /* SpeechRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483A1AE2454A53E0081D96F /* SpeechRecognizerDelegate.swift */; };
+		F483A1B12454A5550081D96F /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483A1B02454A5550081D96F /* SpeechRecognizer.swift */; };
 		F4CF1FE52453751F00EC65A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF1FE42453751F00EC65A8 /* AppDelegate.swift */; };
 		F4CF1FE72453751F00EC65A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF1FE62453751F00EC65A8 /* SceneDelegate.swift */; };
 		F4CF1FE92453751F00EC65A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF1FE82453751F00EC65A8 /* ViewController.swift */; };
@@ -14,9 +16,13 @@
 		F4CF1FEE2453752000EC65A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CF1FED2453752000EC65A8 /* Assets.xcassets */; };
 		F4CF1FF12453752000EC65A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CF1FEF2453752000EC65A8 /* LaunchScreen.storyboard */; };
 		F4CF1FFA2453834400EC65A8 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF1FF92453834400EC65A8 /* Pulsing.swift */; };
+		F4D72F8F2454B89B005E3D14 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D72F8E2454B89B005E3D14 /* AlertController.swift */; };
+		F4D72F942454B901005E3D14 /* UIAlertAction_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D72F932454B901005E3D14 /* UIAlertAction_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F483A1AE2454A53E0081D96F /* SpeechRecognizerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerDelegate.swift; sourceTree = "<group>"; };
+		F483A1B02454A5550081D96F /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		F4CF1FE12453751F00EC65A8 /* SpeechRecognizerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognizerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CF1FE42453751F00EC65A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CF1FE62453751F00EC65A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		F4CF1FF02453752000EC65A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4CF1FF22453752000EC65A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4CF1FF92453834400EC65A8 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
+		F4D72F8E2454B89B005E3D14 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		F4D72F932454B901005E3D14 /* UIAlertAction_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertAction_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +81,21 @@
 		F4CF1FF82453833700EC65A8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F4D72F922454B8F6005E3D14 /* Extension */,
 				F4CF1FF92453834400EC65A8 /* Pulsing.swift */,
+				F483A1AE2454A53E0081D96F /* SpeechRecognizerDelegate.swift */,
+				F483A1B02454A5550081D96F /* SpeechRecognizer.swift */,
+				F4D72F8E2454B89B005E3D14 /* AlertController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		F4D72F922454B8F6005E3D14 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4D72F932454B901005E3D14 /* UIAlertAction_Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F483A1AF2454A53E0081D96F /* SpeechRecognizerDelegate.swift in Sources */,
 				F4CF1FE92453751F00EC65A8 /* ViewController.swift in Sources */,
+				F4D72F942454B901005E3D14 /* UIAlertAction_Extension.swift in Sources */,
 				F4CF1FE52453751F00EC65A8 /* AppDelegate.swift in Sources */,
 				F4CF1FFA2453834400EC65A8 /* Pulsing.swift in Sources */,
+				F4D72F8F2454B89B005E3D14 /* AlertController.swift in Sources */,
 				F4CF1FE72453751F00EC65A8 /* SceneDelegate.swift in Sources */,
+				F483A1B12454A5550081D96F /* SpeechRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

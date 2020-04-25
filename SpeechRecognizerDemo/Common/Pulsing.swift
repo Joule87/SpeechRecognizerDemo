@@ -41,7 +41,6 @@ class Pulsing: CALayer {
         self.bounds = CGRect(x: 0, y: 0, width: radius * 2, height: radius * 2)
         self.cornerRadius = radius
         
-        
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             self.setupAnimationGroup()
             
