@@ -15,6 +15,8 @@ class SpeechRecognizer {
     private var request: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     var locale: Locale
+    var timer: Timer?
+    
     private var isRecording = false {
         didSet {
             delegate?.isRecording(status: isRecording)
@@ -84,8 +86,11 @@ class SpeechRecognizer {
     private func stopRecording() {
         audioEngine?.stop()
         request?.endAudio()
+        recognitionTask?.finish()
+        recognitionTask?.cancel()
         recognitionTask = nil
         isRecording = false
+        timer?.invalidate()
     }
     
     private func startRecording() {
@@ -102,8 +107,10 @@ class SpeechRecognizer {
     }
     
     private func setupRecordTimer() {
-        let timer = Timer(timeInterval: 5.0, target: self, selector: #selector(didEndRecordTime), userInfo: nil, repeats: false)
-        RunLoop.current.add(timer, forMode: .common)
+        timer = Timer(timeInterval: 5.0, target: self, selector: #selector(didEndRecordTime), userInfo: nil, repeats: false)
+        if let timer = timer, timer.isValid {
+           RunLoop.current.add(timer, forMode: .common)
+        }
     }
     
     @objc private func didEndRecordTime() {
